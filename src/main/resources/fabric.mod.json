@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "utilitymod",
+  "version": "1.0.0",
+  "name": "UtilityMod",
+  "authors": [
+    "joshu, MCreator"
+  ],
+  "contact": {
+    "homepage": "https://mcreator.net",
+    "sources": "https://github.com/ClothCreators/MCreatorFabricGenerator"
+  },
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.mcreator.utilitymod.UtilitymodMod"
+    ],
+    "client": [
+      "net.mcreator.utilitymod.ClientInit"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.9.0",
+    "fabric": "*"
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ]
+}

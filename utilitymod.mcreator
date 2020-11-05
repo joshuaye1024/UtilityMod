@@ -1,0 +1,26 @@
+{
+  "id_map": {},
+  "mod_elements": [],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {}
+  },
+  "workspaceSettings": {
+    "modid": "utilitymod",
+    "modName": "UtilityMod",
+    "version": "1.0.0",
+    "author": "joshu, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "fabric-1.16.3",
+    "modElementsPackage": "net.mcreator.utilitymod",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000432115
+}
