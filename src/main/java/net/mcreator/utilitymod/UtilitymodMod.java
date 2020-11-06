@@ -22,6 +22,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.Block;
 
+import net.mcreator.utilitymod.world.TestBiomeBiome;
+import net.mcreator.utilitymod.procedures.TestPortalBlockEntityWalksOnTheBlockProcedure;
 import net.mcreator.utilitymod.block.TestPortalBlockBlock;
 
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
@@ -34,6 +36,8 @@ public class UtilitymodMod implements ModInitializer {
 			new BlockItem(TestPortalBlock_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 	public void onInitialize() {
 		LOGGER.info("Initializing UtilitymodMod");
+		new TestPortalBlockEntityWalksOnTheBlockProcedure();
+		TestBiomeBiome.init();
 		CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {
 		});
 	}

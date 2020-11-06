@@ -9,6 +9,32 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "test_portal_block"
+    },
+    {
+      "name": "TestPortalBlockEntityWalksOnTheBlock",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test_portal_block_entity_walks_on_the_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestBiome",
+      "type": "biome",
+      "sortid": 3,
+      "compiles": false,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test_biome"
     }
   ],
   "variable_elements": [],
