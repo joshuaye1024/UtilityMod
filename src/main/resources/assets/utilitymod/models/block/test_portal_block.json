@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "utilitymod:blocks/water_still",
+    "up": "utilitymod:blocks/water_still",
+    "north": "utilitymod:blocks/water_still",
+    "east": "utilitymod:blocks/water_still",
+    "south": "utilitymod:blocks/water_still",
+    "west": "utilitymod:blocks/water_still",
+    "particle": "utilitymod:blocks/water_still"
+  }
+}

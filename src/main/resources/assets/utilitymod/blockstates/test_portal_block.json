@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "utilitymod:block/test_portal_block"
+    }
+  }
+}
