@@ -1,5 +1,6 @@
 package net.mcreator.utilitymod.mixin;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -10,7 +11,6 @@ import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(ServerPlayerEntity.class)
 public class ReplaceEndPlatformPlayer {
-    private static final BlockPos END_SPAWN_POS = new BlockPos(100, 50, 0);
     /*
     @Inject(at = @At("TAIL"), method = "createEndSpawnPlatform")
     private static void oncreateEndSpawnPlatform(ServerWorld world, CallbackInfo ci) {
@@ -18,17 +18,17 @@ public class ReplaceEndPlatformPlayer {
     }*/
 
     @Overwrite
-    public static void createEndSpawnPlatform(ServerWorld world) {
-        System.out.println("End Platform creation initiated!");
-        BlockPos blockPos = END_SPAWN_POS;
-        int i = blockPos.getX();
-        int j = blockPos.getY() - 2;
-        int k = blockPos.getZ();
-        BlockPos.iterate(i - 2, j + 1, k - 2, i + 2, j + 3, k + 2).forEach((blockPosx) -> {
-            world.setBlockState(blockPosx, Blocks.AIR.getDefaultState());
-        });
-        BlockPos.iterate(i - 2, j, k - 2, i + 2, j, k + 2).forEach((blockPosx) -> {
-            world.setBlockState(blockPosx, Blocks.ACACIA_WOOD.getDefaultState());
-        });
+    private void createEndSpawnPlatform(ServerWorld world, BlockPos centerPos) {
+        BlockPos.Mutable mutable = centerPos.mutableCopy();
+
+        for(int i = -2; i <= 2; ++i) {
+            for(int j = -2; j <= 2; ++j) {
+                for(int k = -1; k < 3; ++k) {
+                    BlockState blockState = k == -1 ? Blocks.ACACIA_WOOD.getDefaultState() : Blocks.AIR.getDefaultState();
+                    world.setBlockState(mutable.set(centerPos).move(j, k, i), blockState);
+                }
+            }
+        }
+
     }
 }
