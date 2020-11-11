@@ -5,7 +5,10 @@
   "mixins": [
     "SetBaseBiomesLayerAccessor",
     "BuiltinBiomesAccessor",
-    "VanillaLayeredBiomeSourceAccessor"
+    "VanillaLayeredBiomeSourceAccessor",
+    "ReplaceEndPlatform",
+    "ReplaceEndPlatformPlayer",
+    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

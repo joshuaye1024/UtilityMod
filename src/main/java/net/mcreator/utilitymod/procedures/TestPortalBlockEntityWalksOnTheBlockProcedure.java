@@ -20,6 +20,7 @@ public class TestPortalBlockEntityWalksOnTheBlockProcedure{
 
 		if(!player.world.isClient){
 			player.moveToWorld(player.world.getServer().getWorld(World.END));
+
 		}
 	}
 }
